@@ -1,7 +1,7 @@
 const updateMeta = require('./update-meta.json');
 const { Titlebar, Color } = require('custom-electron-titlebar');
 const { ipcRenderer } = require('electron');
-const { fs } = require('fs');
+const fs = require('fs');
 
 // Titlebar
 const titlebar = new Titlebar({

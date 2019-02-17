@@ -1,7 +1,7 @@
 {
   "name": "electron-asar-updater",
   "productName": "electron-asar-updater",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
@@ -16,7 +16,17 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "electronPackagerConfig": {
+        "icon": "src/icon.icns"
+      },
+      "packagerConfig": {
+        "icon": "src/icon.icns"
+      },
+      "plugins": [
+        [
+          "./plugin.js"
+        ]
+      ],
       "makers": [
         {
           "name": "@electron-forge/maker-zip",
@@ -38,7 +48,6 @@
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.0.3",
-    "electron-squirrel-startup": "^1.0.0",
     "fs-extra": "^7.0.1",
     "request": "^2.88.0",
     "semver": "^5.6.0"
@@ -48,8 +57,9 @@
     "@electron-forge/cli": "^6.0.0-beta.33",
     "@electron-forge/maker-deb": "^6.0.0-beta.33",
     "@electron-forge/maker-rpm": "^6.0.0-beta.33",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.33",
     "@electron-forge/maker-zip": "^6.0.0-beta.33",
+    "@electron-forge/plugin-base": "^6.0.0-beta.22",
+    "asar": "^0.14.6",
     "babel-eslint": "^10.0.1",
     "electron": "4.0.5",
     "eslint": "^5.14.0",
