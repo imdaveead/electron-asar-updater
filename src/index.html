@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body { font-family: Arial, Helvetica, sans-serif; user-select: none; }
+      .container-after-titlebar, .flexbox { display: flex; flex-direction: column; justify-content: center; flex: 1; }
+      .container-after-titlebar { margin: 20px; }
+
+      h1 { text-align: center; font-weight: 500; }
+      p { text-align: center; }
+
+      .state {display: none;}
+    </style>
+  </head>
+  <body>
+    <div class="state flexbox" id='install-state'>
+      <h1><span id='install-type'></span> <span id='install-name'>{App Name}</span></h1>
+      <p>Please Wait...</p>
+    </div>
+    <div class="state flexbox" id='error-state'>
+      <h1>Error</h1>
+      <p id='error-message'>{Error Message}</p>
+      <p>Error Code: <span id='error-code'>{Error Code}</span></p>
+    </div>
+
+    <div aria-hidden="true" style="height:45px;"></div>
+  </body>
+  <script>require('./renderer.js')</script>
+</html>

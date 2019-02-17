@@ -1,0 +1,6 @@
+{
+    "name": "electron-app",
+    "display-name": "Electron App",
+    "update-url": "http://localhost:8080",
+    "theme-color": "#4286f4"
+}
